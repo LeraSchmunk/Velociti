@@ -1,0 +1,68 @@
+/* Reset and base styles */
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box; /*Модель, где в ширину и высоту включены внутренние и внешние отступы + рамки */
+}
+
+a, a:visited, a:hover {
+  color: inherit; /* Наследует от родителя */
+  text-decoration: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+p + p {
+  margin-top: 1em; /* Выбираем соседний абзац */
+}
+
+ul {
+  list-style: none;
+}
+
+img, svg, video {
+  display: inline-block; /* Строчно-блочные */
+  vertical-align: top; /* Убрать отступы картинок */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Если не помещается в обертку, растягивается */
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input::-ms-clear { /* Убрать крестик у internet explorer */
+  display: none;
+}
+
+button, input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
